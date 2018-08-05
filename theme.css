@@ -1,0 +1,103 @@
+body{
+  margin:0;
+  font-family:'Big Noodle';
+}
+@font-face{
+  font-family: 'Big Noodle';
+  src: url('assets/fonts/bignoodle.woff') format('woff');
+  font-weight:normal;
+  font-style:normal;
+}
+#gradient{
+  width:100vw;
+  height:100vh;
+  background: linear-gradient(358deg, #001337, #074380);
+  background-size: 400% 400%;
+  animation: AnimationName 18s ease infinite;
+}
+@keyframes AnimationName {
+    0%{background-position:52% 0%}
+    50%{background-position:49% 100%}
+    100%{background-position:52% 0%}
+}
+#container{
+  display: table;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+#middle{
+  display: table-cell;
+  vertical-align: middle;
+}
+#home_buttons{
+  display:flex;
+  flex-direction: row;
+  flex-wrap:wrap;
+}
+.home_button{
+  background-color:#218ffe;
+  position:relative;
+  background-size:70%;
+  background-repeat:no-repeat;
+  background-position:50% 15%;
+  transition: transform 0.2s;
+}
+.home_button:hover{
+  transform: scale(1.15);
+}
+#heroes{
+  background-image: url('assets/home/heroes.png');
+}
+#stats
+{
+  background-image: url('assets/home/stats.png');
+}
+#spray{
+  background-image: url('assets/home/spray.png');
+}
+.home_button .title{
+  height:15%;
+  width: 100%;
+  color:#ffffff;
+  background-color:rgba(0, 0, 0, 0.5);
+  position: absolute;
+  bottom: 0;
+  text-align:center;
+
+  padding-top:1vh;
+}
+@media all and (orientation:portrait) {
+  #container{
+    margin-left:5vw;
+    margin-right:5vw;
+    width: 90vw;
+  }
+  .home_button{
+    width:40vw;
+    height:40vw;
+    margin-left:2.5vw;
+    margin-right:2.5vw;
+    margin-top:2.5vw;
+    margin-bottom:2.5vw;
+  }
+  .home_button .title{
+    font-size: 4.5vw;
+  }
+}
+@media all and (orientation:landscape) {
+  #container{
+    margin-left:5vw;
+    margin-right:5vw;
+    width:90vw;
+  }
+  .home_button{
+    width:20vw;
+    height:20vw;
+    margin-left:1vw;
+    margin-right:1vw;
+  }
+  .home_button .title{
+    font-size: 2vw;
+  }
+}
